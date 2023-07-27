@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcionários</title>
+</head>
+<body>
+  <div id="notice">
+    <%= notice %>
+  </div>
+
+  <div class="index">
+    <h1>Funcionários</h1>
+    <% @funcionarios.each do |funcionario| %>
+      <%= render funcionario %>
+      <%= link_to "Detalhes", funcionario, class:'btn btn-primary' %>
+      <hr>
+    <% end %>
+    <div id="Paginacao">
+      <%= will_paginate @funcionarios %>
+    </div>
+    <%= link_to "Voltar Home", home_index_path, class: 'btn btn-primary' %>
+    <%= link_to "Novo Funcionário", new_funcionario_path, class: 'btn btn-primary' %>
+  </div>
+</body>
+</html>

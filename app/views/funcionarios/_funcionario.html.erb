@@ -1,0 +1,53 @@
+<div id="<%= dom_id funcionario %>">
+  <p>
+    <strong>Nome:</strong>
+    <%= funcionario.nome %>
+  </p>
+
+  <p>
+    <strong>Cpf:</strong>
+    <%= funcionario.cpf %>
+  </p>
+
+  <p>
+    <strong>Idade:</strong>
+    <%= funcionario.idade %>
+  </p>
+
+  <p>
+    <strong>Admissão:</strong>
+    <%= l funcionario.admissao, format: :default %>
+  </p>
+
+  <p>
+    <strong>Salário:</strong>
+    <%= funcionario.salario %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= funcionario.email %>
+  </p>
+
+  <p>
+    <strong>Tel:</strong>
+    <%= funcionario.tel %>
+  </p>
+
+  <p>
+    <strong>Rua:</strong>
+    <%= funcionario.endereco_funcionario.rua%>
+  </p>
+
+  <p>
+    <strong>Empresa:</strong>
+    <%= funcionario.empresa.nome %>
+  </p>
+
+  <p>
+    <strong>Setor:</strong>
+    <%= funcionario.setor.nome %>
+  </p>
+
+
+</div>

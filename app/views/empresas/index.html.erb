@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresas</title>
+  <link rel="stylesheet" href="application.css">
+</head>
+<body>
+  <div id="notice">
+    <%= notice %>
+  </div>
+
+  <div class="index">
+    <h1>Empresas</h1>
+    <% @empresas.each do |empresa| %>
+      <%= render empresa %>
+      <%= link_to "Detalhes", empresa, class:'btn btn-primary' %>
+      <hr>
+    <% end %>
+    <div id="Paginacao">
+      <%= will_paginate @empresas %>
+    </div>
+      <%= link_to "Voltar Home", home_index_path, class: 'btn btn-primary' %>
+      <%= link_to "Nova Empresa", new_empresa_path, class: 'btn btn-primary' %>
+  </div>
+
+    
+</body>
+</html>

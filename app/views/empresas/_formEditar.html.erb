@@ -1,0 +1,69 @@
+<%= form_with(model: empresa) do |form| %>
+<section class="forms">
+  <h1>Editar Empresa</h1>
+
+  <h2 id="CampoDados">Dados:</h2>
+  <div class='field'>
+    <%= form.label :nome%>
+  </div>
+    <%= form.text_field :nome %>
+
+  <div class='field'>
+    <%= form.label :cnpj%>
+  </div>
+    <%= form.text_field :cnpj %>
+    <hr>
+  <h2 id="Campos">Contatos:</h2>
+  <div class='field'>
+    <%= form.label :email%>
+  </div>
+    <%= form.text_field :email %>
+
+  <div class='field'>
+    <%= form.label :tel%>
+  </div>
+    <%= form.text_field :tel %>
+    <hr>
+
+  <%=form.fields_for :endereco_empresa do |endereco_fields|%>
+  <h2 id="Campos">Endereço:</h2>
+    <div class='field'>
+      <%= form.label :rua%>
+    </div>
+      <%= endereco_fields.text_field :rua %>
+
+    <div class='field'>
+      <%= form.label :num%>
+    </div>
+      <%= endereco_fields.number_field :num %>
+
+    <div class='field'>
+      <%= form.label :bairro%>
+    </div>
+      <%= endereco_fields.text_field :bairro %>
+
+    <div class='field'>
+      <%= form.label :cidade%>
+    </div>
+      <%= endereco_fields.text_field :cidade %>
+
+    <div class='field'>
+      <%= form.label :estado%>
+    </div>
+      <%= endereco_fields.text_field :estado %>
+  <% end%>
+
+  <div id="CRUDs">
+    <button class="btn btn-primary" type="submit">Atualizar Empresa</button>
+  </div>
+<% end %>
+
+  <% if empresa.errors.any? %>
+    <div>
+      <h2><%= pluralize(empresa.errors.count, "Erros") %>. Não é possível salvar esse funcionário.<br> Confirá os campos<h2>
+    </div>
+  <% end %>
+   </section>
+   <div class="Secundarios">
+    <%= link_to "Voltar", empresas_path, class: 'btn btn-primary' %>
+  </div>

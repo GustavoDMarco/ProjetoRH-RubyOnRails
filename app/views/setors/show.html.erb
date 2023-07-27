@@ -1,0 +1,15 @@
+<div id="notice">
+  <%= notice %>
+</div>
+
+<section class="index" id="detalhes">
+  <%= render @setor %>
+
+  <%= button_to "Apagar Setor", @setor, method: :delete, class: "btn btn-primary" %>
+  
+</section>
+
+<div class="Secundarios" id="editar">
+  <%= link_to "Voltar", setors_path, class: 'btn btn-primary' %>
+  <%= link_to "Editar Setor", edit_setor_path(@setor), class: 'btn btn-primary' %>
+</div>

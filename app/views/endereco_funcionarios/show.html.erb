@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @endereco_funcionario %>
+
+<div>
+  <%= link_to "Edit this endereco funcionario", edit_endereco_funcionario_path(@endereco_funcionario) %> |
+  <%= link_to "Back to endereco funcionarios", endereco_funcionarios_path %>
+
+  <%= button_to "Destroy this endereco funcionario", @endereco_funcionario, method: :delete %>
+</div>

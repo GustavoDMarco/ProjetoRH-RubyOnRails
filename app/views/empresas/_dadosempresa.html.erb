@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa</title>
+</head>
+<body>
+  <div id="<%= dom_id empresa %>">
+    <section class="index" id="detalhes">
+      <h2>Dados:</h2>
+      <p>
+        <strong>Nome:</strong>
+        <%= empresa.nome %>
+      </p>
+    
+      <p>
+        <strong>Cnpj:</strong>
+        <%= empresa.cnpj %>
+      </p>
+      <h2>Contato:</h2>
+      <p>
+        <strong>Email:</strong>
+        <%= empresa.email %>
+      </p>
+    
+      <p>
+        <strong>Tel:</strong>
+        <%= empresa.tel %>
+      </p>
+      <h2>Endereço:</h2>
+      <p>
+        <strong>Rua:</strong>
+        <%= empresa.endereco_empresa.rua %>
+      </p>
+    
+      <p>
+        <strong>Num:</strong>
+        <%= empresa.endereco_empresa.num %>
+      </p>
+    
+      <p>
+        <strong>Bairro:</strong>
+        <%= empresa.endereco_empresa.bairro %>
+      </p>
+    
+      <p>
+        <strong>Cidade:</strong>
+        <%= empresa.endereco_empresa.cidade %>
+      </p>
+    
+      <p>
+        <strong>Estado:</strong>
+        <%= empresa.endereco_empresa.estado %>
+      </p>
+    
+    <div id="CRUDs">
+      <%= button_to "Apagar Empresa", @empresa, method: :delete, class: "btn btn-primary" %>
+    </div>
+    
+    </section>
+
+    <div class="Secundarios" id="editar">
+  <%= link_to "Voltar", empresas_path, class: 'btn btn-primary' %>
+  <%= link_to "Editar Empresa", edit_empresa_path(@empresa), class: 'btn btn-primary' %>
+</div>
+    
+  </div>
+
+</body>
+</html>

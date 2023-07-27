@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setores</title>
+</head>
+<body>
+
+  <div id="notice">
+    <%= notice %>
+  </div>
+
+  <div class="index">
+    <h1>Setores</h1>
+    <% @setors.each do |setor| %>
+      <%= render setor %>
+      <%= link_to "Detalhes", setor, class:'btn btn-primary' %>
+      <hr>
+    <% end %>
+    <%= link_to "Voltar Home", home_index_path, class: 'btn btn-primary' %>
+    <%= link_to "Novo Setor", new_setor_path, class: 'btn btn-primary' %>
+
+  </div>
+
+</body>
+</html>

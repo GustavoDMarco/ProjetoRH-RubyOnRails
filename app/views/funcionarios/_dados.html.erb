@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcionário</title>
+</head>
+<body>
+  <div id="<%= dom_id funcionario %>">
+    <section class="index" id="detalhes">
+      <h2>Dados:</h2>
+        <p>
+          <strong>Nome:</strong>
+          <%= funcionario.nome %>
+        </p>
+  
+        <p>
+          <strong>Cpf:</strong>
+          <%= funcionario.cpf %>
+        </p>
+  
+        <p>
+          <strong>Idade:</strong>
+          <%= funcionario.idade %>
+        </p>
+  
+        <p>
+          <strong>Empresa:</strong>
+          <%= funcionario.empresa.nome %>
+        </p>
+  
+        <p>
+          <strong>Admissão:</strong>
+          <%= l funcionario.admissao, format: :default %>
+        </p>
+  
+        <p>
+          <strong>Salário:</strong>
+          <%= funcionario.salario %>
+        </p>
+  
+        <p>
+          <strong>Setor:</strong>
+          <%= funcionario.setor.nome %>
+        </p>
+  
+        <h2>Contato:</h2>
+        <p>
+          <strong>Email:</strong>
+          <%= funcionario.email %>
+        </p>
+  
+        <p>
+          <strong>Tel:</strong>
+          <%= funcionario.tel %>
+        </p>
+  
+        <h2>Endereço:</h2>
+        <p>
+          <strong>Num:</strong>
+          <%= funcionario.endereco_funcionario.num%>
+        </p>
+  
+        <p>
+          <strong>Bairro:</strong>
+          <%= funcionario.endereco_funcionario.bairro%>
+        </p>
+  
+        <p>
+          <strong>Cidade:</strong>
+          <%= funcionario.endereco_funcionario.cidade%>
+        </p>
+  
+        <p>
+          <strong>Estado:</strong>
+          <%= funcionario.endereco_funcionario.estado%>
+        </p>
+        <div id="CRUDs">
+          <%= button_to "Apagar funcionário", @funcionario, method: :delete, class: "btn btn-primary" %>
+        </div>
+      </section>
+  </div>
+  
+ 

@@ -1,0 +1,99 @@
+  <%= form_with(model: funcionario) do |form| %>
+    <section class="forms">
+      <h1>Novo Funcionário</h1>
+
+      <h2 id="CampoDados">Dados:</h2>
+      <div class="field">
+        <%= form.label :nome %>
+      </div>
+        <%= form.text_field :nome %>
+
+      <div class="field">
+        <%= form.label :cpf %>
+      </div>
+        <%= form.text_field :cpf %>
+
+      <div class="field">
+        <%= form.label :idade %>
+      </div>
+        <%= form.number_field :idade %>
+
+      <div class="field">
+        <%= form.label :empresa_id %>
+      </div>
+        <%= collection_select(:funcionario,:empresa_id, Empresa.all, :id, :nome)%>
+
+      <div class="field">
+        <%= form.label :admissao %>
+      </div>
+        <%= form.date_field :admissao%>
+
+        <div class="field">
+        <%= form.label :salario %>
+      </div>
+        <%= form.text_field :salario %>
+
+
+      <div class="field">
+        <%= form.label :setor_id %>
+      </div>
+        <%= collection_select(:funcionario, :setor_id, Setor.all, :id, :nome) %>
+
+        <hr>
+
+        <h2 id="Campos">Contatos:</h2>
+      <div class="field">
+        <%= form.label :email %>
+      </div>
+        <%= form.text_field :email %>
+
+      <div class="field">
+        <%= form.label :tel %>
+      </div>
+        <%= form.text_field :tel %>
+
+      <hr> 
+    
+      <%= form.fields_for :endereco_funcionario do |endereco_fields| %>
+            <h2 id="Campos">Endereço:</h2>
+          <div class="field">
+            <%= form.label :rua %>
+          </div>
+            <%= endereco_fields.text_field :rua %>
+        
+          <div class="field">
+            <%= form.label :num %>
+          </div>
+            <%= endereco_fields.text_field :num %>
+        
+          <div class="field">
+            <%= form.label :bairro %>
+          </div>
+            <%= endereco_fields.text_field :bairro %>
+        
+          <div class="field">
+            <%= form.label :cidade %>
+          </div>
+            <%= endereco_fields.text_field :cidade %>
+        
+          <div class="field">
+            <%= form.label :estado %>
+          </div>
+            <%= endereco_fields.text_field :estado %>
+          </div>
+      <% end %>
+        <div id="CRUDs">
+          <button class="btn btn-primary" type="submit">Criar Funcionário</button>
+        </div>
+<% end %>
+    <% if funcionario.errors.any? %>
+      <div>
+        <h2><%= pluralize(funcionario.errors.count, "Erros") %>. Não é possível salvar esse funcionário.<br> Confirá os campos</h2>
+      </div>
+    <% end %>
+    </section>
+
+<div class="Secundarios">
+  <%= link_to "Voltar", funcionarios_path, class: 'btn btn-primary' %>
+</div>
+

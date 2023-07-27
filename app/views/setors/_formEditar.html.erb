@@ -1,0 +1,20 @@
+<%= form_with(model: setor) do |form| %>
+<section class="forms">
+  <h1>Editar Setor</h1>
+  <div class="field">
+    <%= form.label :nome %>
+  </div>
+    <%= form.text_field :nome %>
+
+  <div id="CRUDs">
+    <button class="btn btn-primary" type="submit">Atualizar Setor</button>
+  </div>
+  <% if setor.errors.any? %>
+    <div>
+      <h2><%= pluralize(setor.errors.count, "error") %>. Não é possível salvar esse funcionário.<br> Confirá os campos<h2>
+  <% end %>
+<% end %>
+</section>
+<div class="Secundarios">
+  <%= link_to "Voltar", setors_path, class: 'btn btn-primary' %>
+</div>
