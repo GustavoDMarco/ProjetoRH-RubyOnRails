@@ -219,7 +219,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bootsnap
   capybara
   cocoon
   debug

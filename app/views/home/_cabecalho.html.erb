@@ -8,10 +8,10 @@
 <body>
     <header>
         <nav>   
-            <a href="http://127.0.0.1:3000/home/index">Home</a>
-            <a href="http://127.0.0.1:3000/empresas">Empresas</a>
-            <a href="http://127.0.0.1:3000/funcionarios">Funcionários</a>
-            <a href="http://127.0.0.1:3000/setors">Setores</a>
+            <%= link_to "Home", home_index_path, class: 'btn btn-primary' %>
+            <%= link_to "Empresas", empresas_path, class: 'btn btn-primary' %>
+            <%= link_to "Funcionários", funcionarios_path, class: 'btn btn-primary' %>
+            <%= link_to "Setores", setors_path, class: 'btn btn-primary' %>
         </nav>
         
     </header>    
