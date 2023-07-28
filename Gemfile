@@ -12,6 +12,12 @@ gem 'i18n'
 
 gem 'will_paginate'
 
+gem 'bootstrap', '~> 4.0.0'
+
+gem 'jquery-rails'
+
+gem 'sass-rails'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
