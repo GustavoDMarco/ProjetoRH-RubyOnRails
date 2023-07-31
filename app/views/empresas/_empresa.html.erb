@@ -1,27 +1,37 @@
-<div id="<%= dom_id empresa %>">
-  <p>
-    <strong>Nome:</strong>
-    <%= empresa.nome %>
-  </p>
-
-  <p>
-    <strong>Cnpj:</strong>
-    <%= empresa.cnpj %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= empresa.email %>
-  </p>
-
-  <p>
-    <strong>Tel:</strong>
-    <%= empresa.tel %>
-  </p>
-
-  <p>
-    <strong>Rua:</strong>
-    <%= empresa.endereco_empresa.rua %>
-  </p>
-
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresas</title>
+</head>
+<body>
+  <div id="<%= dom_id empresa %>">
+    <p>
+      <strong>Nome:</strong>
+      <%= empresa.nome %>
+    </p>
+  
+    <p>
+      <strong>Cnpj:</strong>
+      <%= empresa.cnpj %>
+    </p>
+  
+    <p>
+      <strong>Email:</strong>
+      <%= empresa.email %>
+    </p>
+  
+    <p>
+      <strong>Tel:</strong>
+      <%= empresa.tel %>
+    </p>
+  
+    <p>
+      <strong>Rua:</strong>
+      <%= empresa.endereco_empresa.rua %>
+    </p>
+  
+  </div>
+</body>
+</html>

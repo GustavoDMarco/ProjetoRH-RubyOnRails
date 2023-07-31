@@ -113,11 +113,12 @@
   
   .index{
     height: auto;
-    width: 600px;
     text-align: center;
     margin: auto;
     background-color: #EEEEEE;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.26);
+    min-width: 200px;
+    max-width: 600px;
   }
   .index>h1{
     padding: 10px;
