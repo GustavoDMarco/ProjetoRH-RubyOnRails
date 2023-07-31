@@ -11,6 +11,7 @@
     <%= notice %>
   </div>
 
+
   <div class="index">
     <h1>Empresas</h1>
     <% @empresas.each do |empresa| %>
@@ -24,7 +25,6 @@
       <%= link_to "Voltar Home", home_index_path, class: 'btn btn-primary' %>
       <%= link_to "Nova Empresa", new_empresa_path, class: 'btn btn-primary' %>
   </div>
-
     
 </body>
 </html>
