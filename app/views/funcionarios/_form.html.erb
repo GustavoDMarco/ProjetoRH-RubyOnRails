@@ -91,9 +91,9 @@
         <h2><%= pluralize(funcionario.errors.count, "Erros") %>. Não é possível salvar esse funcionário.<br> Confirá os campos</h2>
       </div>
     <% end %>
+  <%= link_to "Voltar", funcionarios_path, class: 'btn btn-primary' %>
     </section>
 
-<div class="Secundarios">
-  <%= link_to "Voltar", funcionarios_path, class: 'btn btn-primary' %>
-</div>
+
+
 

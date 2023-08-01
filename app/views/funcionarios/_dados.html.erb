@@ -78,6 +78,8 @@
         <div id="CRUDs">
           <%= button_to "Apagar funcionário", @funcionario, method: :delete, class: "btn btn-primary" %>
         </div>
+        <%= link_to "Voltar", funcionarios_path, class: 'btn btn-primary' %>
+        <%= link_to "Editar funcionário", edit_funcionario_path(@funcionario), class: 'btn btn-primary' %>
       </section>
   </div>
   

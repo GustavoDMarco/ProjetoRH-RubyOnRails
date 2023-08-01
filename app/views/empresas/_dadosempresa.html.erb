@@ -57,13 +57,9 @@
     <div id="CRUDs">
       <%= button_to "Apagar Empresa", @empresa, method: :delete, class: "btn btn-primary" %>
     </div>
-    
+      <%= link_to "Voltar", empresas_path, class: 'btn btn-primary' %>
+      <%= link_to "Editar Empresa", edit_empresa_path(@empresa), class: 'btn btn-primary' %>
     </section>
-
-    <div class="Secundarios" id="editar">
-  <%= link_to "Voltar", empresas_path, class: 'btn btn-primary' %>
-  <%= link_to "Editar Empresa", edit_empresa_path(@empresa), class: 'btn btn-primary' %>
-</div>
     
   </div>
 
